@@ -1,0 +1,279 @@
+/* Hacker Theme CSS */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #0f0;
+    --secondary-color: #00ffff;
+    --background-color: #000;
+    --text-color: #0f0;
+    --accent-color: #ff00ff;
+    --danger-color: #ff0000;
+    --success-color: #00ff00;
+    --warning-color: #ffff00;
+    --info-color: #00ffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fira Code', 'Source Code Pro', 'Courier New', monospace;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Matrix background effect */
+.matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.15;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    text-decoration: none;
+    font-family: 'Fira Code', monospace;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    box-shadow: 0 0 10px var(--text-color);
+}
+
+.btn-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Forms */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Fira Code', monospace;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Alert messages */
+.alert {
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
+
+.alert-info {
+    background-color: rgba(0, 255, 255, 0.1);
+    border-color: var(--info-color);
+    color: var(--info-color);
+}
+
+.alert-success {
+    background-color: rgba(0, 255, 0, 0.1);
+    border-color: var(--success-color);
+    color: var(--success-color);
+}
+
+.alert-danger {
+    background-color: rgba(255, 0, 0, 0.1);
+    border-color: var(--danger-color);
+    color: var(--danger-color);
+}
+
+/* Dashboard */
+.dashboard {
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+}
+
+.user-info {
+    margin-bottom: 20px;
+}
+
+.success-message {
+    font-size: 2rem;
+    color: var(--success-color);
+    text-shadow: 0 0 10px var(--success-color);
+    animation: glitch 1s infinite alternate;
+}
+
+/* Glitch text effect */
+.glitch {
+    position: relative;
+    animation: glitch 1s infinite alternate;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 var(--accent-color), -0.05em -0.025em 0 var(--secondary-color);
+    }
+    25% {
+        text-shadow: -0.05em -0.025em 0 var(--accent-color), 0.025em 0.025em 0 var(--secondary-color);
+    }
+    50% {
+        text-shadow: 0.025em 0.05em 0 var(--accent-color), -0.05em -0.05em 0 var(--secondary-color);
+    }
+    75% {
+        text-shadow: -0.05em -0.05em 0 var(--accent-color), -0.025em 0.05em 0 var(--secondary-color);
+    }
+    100% {
+        text-shadow: -0.025em 0 0 var(--accent-color), 0.05em -0.025em 0 var(--secondary-color);
+    }
+}
+
+/* Typing effect with CSS */
+.typing {
+    display: inline-block;
+    border-right: 2px solid var(--primary-color);
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* JavaScript typing effect */
+.js-typing {
+    border-right: 2px solid var(--primary-color);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary-color) }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 1px solid var(--primary-color);
+    font-size: 0.9rem;
+}
