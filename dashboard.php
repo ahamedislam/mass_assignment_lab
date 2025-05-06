@@ -72,7 +72,7 @@ $role = $user['role'];
                 </div>
 
                 <?php if ($role === 'root'): ?>
-                    <div class="success-message">
+                    <div class="">
                         <h2>🎉 Congratulations! Lab Solved! 🎉</h2>
                         <p class="js-typing" data-text="You have successfully exploited the mass assignment vulnerability!"></p>
 
